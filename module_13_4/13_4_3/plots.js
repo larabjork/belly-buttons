@@ -23,7 +23,7 @@ function optionChanged(newSample) {
 function buildMetadata(sample) {
     d3.json("samples.json").then((data) => {
         var metadata = data.metadata;
-        console.log(metadata)
+        // console.log(metadata)
         var resultsArray = metadata.filter(sampleObj => sampleObj.id == sample);
         var result = resultsArray[0];
         console.log(result)
