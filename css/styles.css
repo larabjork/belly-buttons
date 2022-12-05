@@ -1,0 +1,20 @@
+.jumbotron {
+    background-image: url("../images/pexels-edward-jenner-4031366.jpg");
+    background-size: 100% 100%;
+    text-align: center;
+}
+
+body {
+    background-color: #b6d7e9;
+    font-family: "Montserrat", "Arial", sans-serif;
+}
+
+h1 {
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-weight: bold;
+}
+
+.panel-heading {
+    color: #6199d1
+}
+

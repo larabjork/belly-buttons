@@ -93,13 +93,16 @@ function buildCharts(sample) {
         x: sampleValues,
         y: yticks,
         type: "bar",
-        orientation: "h"
+        orientation: "h",
+        marker: {color: "#6199d1"}
     } ];
     // Create the layout for the bar chart. 
     var barLayout = {
-        title: "Top 10 Bacteria Cultures Found",
+        title: "<b>Top 10 Bacteria Cultures Found</b>",
         yaxis: {autorange: "reversed"},
-        barmode: "group"
+        barmode: "group",
+        // plot_bgcolor:"#black",
+        paper_bgcolor:"#b6d7e9"
     };
     // Use Plotly to plot the data with the layout. 
     Plotly.newPlot("bar", barData, barLayout)
@@ -116,19 +119,21 @@ function buildCharts(sample) {
             color: otuIDs,
             colorscale: "Portland",
             // sizemode: "area"
+
         }
     } ];
 
      
     // Create the layout for the bubble chart.
     var bubbleLayout = {
-        title: "Bacteria Cultures Per Sample",
+        title: "<b>Bacteria Cultures Per Sample</b>",
         xaxis: {title: "OTU IDs"},
         hovermode: "closest",
         margins: {l: 400,
                 r: 400,
                 t: 400,
-                b: 400}
+                b: 400},
+        paper_bgcolor:"#b6d7e9"
       };
 
     // Use Plotly to plot the data with the layout.
@@ -143,19 +148,22 @@ function buildCharts(sample) {
         mode: "gauge+number",
         gauge: {
             axis: {range: [null, 10]},
-            bar: {color: "black"},
+            bar: {color: "#cfcfcf"},
             steps: [
-              { range: [0, 2], color: "red" },
-              { range: [2, 4], color: "orange" },
-              { range: [4, 6], color: "yellow" },
-              { range: [6, 8], color: "yellowgreen" },
-              { range: [8, 10], color: "green" },
+              { range: [0, 2], color: "#d16161" },
+              { range: [2, 4], color: "#d19961" },
+              { range: [4, 6], color: "#d1d16a" },
+              { range: [6, 8], color: "#b5d161" },
+              { range: [8, 10], color: "#61d161" },
             ]
         }}
     ];
     
     // Create the layout for the gauge chart.
-    var gaugeLayout = { width: 600, height: 500, margin: { t: 0, b: 0 } };
+    var gaugeLayout = { width: 600, 
+        height: 500, 
+        margin: { t: 0, b: 0 }, 
+        paper_bgcolor:"#b6d7e9"};
 
     // Use Plotly to plot the gauge data and layout.
     Plotly.newPlot("gauge", gaugeData, gaugeLayout);
