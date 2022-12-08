@@ -94,16 +94,19 @@ function buildCharts(sample) {
         y: yticks,
         type: "bar",
         orientation: "h",
-        marker: {color: "#6199d1"}
+        marker: {color: "#0b5f97"}
     } ];
     // Create the layout for the bar chart. 
     var barLayout = {
         title: "<b>Top 10 Bacteria Cultures Found</b>",
         yaxis: {autorange: "reversed"},
         barmode: "group",
-        // plot_bgcolor:"#black",
-        paper_bgcolor:"#b6d7e9"
+        paper_bgcolor:"#b6d7e9",
+        font: {
+          family: 'Verdana, sans-serif',
+        }
     };
+
     // Use Plotly to plot the data with the layout. 
     Plotly.newPlot("bar", barData, barLayout)
 
@@ -114,12 +117,9 @@ function buildCharts(sample) {
         text: otuLabels,
         mode: "markers",
         marker: {
-            // size: [20, 40, 60, 80, 100, 120, 140],
             size: sampleValues,
             color: otuIDs,
-            colorscale: "Portland",
-            // sizemode: "area"
-
+            colorscale: "Portland"
         }
     } ];
 
@@ -133,7 +133,10 @@ function buildCharts(sample) {
                 r: 400,
                 t: 400,
                 b: 400},
-        paper_bgcolor:"#b6d7e9"
+        paper_bgcolor:"#b6d7e9",
+        font: {
+            family: 'Verdana, sans-serif',
+          }
       };
 
     // Use Plotly to plot the data with the layout.
@@ -150,13 +153,16 @@ function buildCharts(sample) {
             axis: {range: [null, 10]},
             bar: {color: "#cfcfcf"},
             steps: [
-              { range: [0, 2], color: "#d16161" },
-              { range: [2, 4], color: "#d19961" },
-              { range: [4, 6], color: "#d1d16a" },
-              { range: [6, 8], color: "#b5d161" },
-              { range: [8, 10], color: "#61d161" },
+              { range: [0, 2], color: "#d91e1e"},
+              { range: [2, 4], color: "ea6c30" },
+              { range: [4, 6], color: "#f2aa38" },
+              { range: [6, 8], color: "#bce444" },
+              { range: [8, 10], color: "#55a090" },
             ]
-        }}
+        },
+        font: {
+            family: 'Verdana, sans-serif',
+          }}
     ];
     
     // Create the layout for the gauge chart.

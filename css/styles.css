@@ -6,15 +6,18 @@
 
 body {
     background-color: #b6d7e9;
-    font-family: "Montserrat", "Arial", sans-serif;
 }
 
 h1 {
-    font-family: "Montserrat", "Arial", sans-serif;
     font-weight: bold;
 }
 
 .panel-heading {
-    color: #6199d1
+    color: #0b5f97;
 }
+
+* {
+    font-size: 100%;
+    font-family: Verdana, sans-serif;
+   }
 
