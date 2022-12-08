@@ -12,7 +12,7 @@ The independent challenge portion of the exercise involved the addition of three
 ## Results
 ### Changes to Styling
 After adding the three required charts, the page looked like this:
-![page prior to customization](https://github.com/larabjork/belly-buttons/blob/main/static/images/deliverables_1_to_3.png)
+![page prior to customization](https://github.com/larabjork/belly-buttons/blob/main/images/deliverables_1_to_3.png)
 
 From the assignment's options to customize the page, I opted to do the following:
  * Add an image to the jumbotron (obtained from [pexels website](https://www.pexels.com/photo/close-up-photograph-of-petri-dishes-with-different-colors-4031366/). Photo credit: Edward Jenner.
